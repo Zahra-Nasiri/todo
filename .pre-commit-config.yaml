@@ -1,0 +1,45 @@
+# Use `pre-commit autoupdate` to update this
+default_language_version:
+  python: python3.12
+exclude: 'migrations/.*|.*\.(min\.js|svg|json)$'
+repos:
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.16.0
+    hooks:
+      - id: pyupgrade
+        args:
+          - --py311-plus
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: "1.18.0"
+    hooks:
+      - id: django-upgrade
+        args:
+          - --target-version=4.2
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: double-quote-string-fixer
+  - repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: v0.3.1
+    hooks:
+      - id: absolufy-imports
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+  - repo: https://github.com/google/yapf
+    rev: v0.40.2
+    hooks:
+      - id: yapf
+  - repo: https://github.com/pycqa/flake8
+    rev: '7.1.0'
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-django
+  - repo: https://github.com/pycqa/bandit
+    rev: '1.7.9'
+    hooks:
+      - id: bandit

@@ -1,0 +1,16 @@
+.idea
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.egg*
+*.log
+/media/*
+/files/*
+.venv
+venv
+local.conf
+*.mo
+sqlite3.db
+identifier.sqlite
+build/
+static/
