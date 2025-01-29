@@ -4,6 +4,7 @@
 Welcome to the todo app! This repository contains the source code for a Django-based project. Follow the instructions below to set up, run, and contribute to the project.
 
 ## Installation
+go to base directory of project
 
 ### Prepare the Environment
 1. **Create a virtual environment:**
@@ -30,7 +31,7 @@ Welcome to the todo app! This repository contains the source code for a Django-b
 ### Configure the Project
 1. Copy the `default.conf` file to `local.conf`:
     ```bash
-    cp default.conf local.conf
+    cp todoapp/default.conf local.conf
     ```
 
 2. Apply database migrations:
