@@ -7,5 +7,6 @@ class CustomPagination(PageNumberPagination):
     max_page_size = 100
 
     def paginate_queryset(self, queryset, request, view=None):
-        queryset = queryset.order_by('-created_at')  # Order by your preferred field
+        queryset = queryset.order_by(
+            '-created_at')  # Order by your preferred field
         return super().paginate_queryset(queryset, request, view)

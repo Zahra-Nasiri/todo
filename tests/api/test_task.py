@@ -1,11 +1,14 @@
 from django.test import TestCase
-from django.utils.timezone import now, timedelta
-from rest_framework.test import APIClient
-from rest_framework import status
-from tasks.models import Task
 from django.urls import reverse
+from django.utils.timezone import now, timedelta
+from rest_framework import status
+from rest_framework.test import APIClient
+
+from tasks.models import Task
+
 
 class TaskViewSetTestCase(TestCase):
+
     def setUp(self):
         self.client = APIClient()
         self.task_data = {
